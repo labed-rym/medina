@@ -1,0 +1,94 @@
+.container {
+    background-color:transparent;
+    margin-top: 70px;
+    border-radius: 10px;
+    height:fit-content;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    
+    
+
+}
+form{
+    margin:auto;
+    width: fit-content;
+    height:fit-content;
+    margin-top:50px;
+padding-bottom: 85px;
+
+}
+
+h1 {
+    color: #354618;
+    text-align: center;
+    margin-bottom: 75px;
+    margin:0;
+}
+.inputs {
+display:flex;
+flex-wrap: wrap;
+width: 999px;
+height: 258px;
+justify-content: space-around;
+align-items: flex-start;
+
+
+}
+.inputs div{
+    width:404px;
+    height: 71px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2D3648;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{   
+    height: 30px;
+    width: 100%;
+    padding: 0;
+    padding-left: 8px;
+    margin:0;
+    margin-bottom: 15px;
+    border: 1px solid #2D3648;
+    border-radius: 10px;
+    background-color: white;
+
+    
+}
+select {
+    width: 100%;
+    padding: 8px;
+    margin:0;
+    margin-bottom: 15px;
+    border: 1px solid #2D3648;
+    border-radius: 10px;
+    background-color: white;
+
+}
+button {
+    width: 255px;
+    height: 40px;
+    padding: auto;
+    background-color: #354618;
+    color: #F4F6F2;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: 0;
+    margin-left: 695px;
+    font-size: 24px;
+    font-family: 'Amiri',serif;
+    box-shadow: -4px 4px 10px #0000006a;
+}
+button:active{
+    box-shadow: none;
+}

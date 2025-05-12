@@ -1,0 +1,12 @@
+.editorAll {
+    background-color: var(--background-white);
+    box-shadow: var(--shadow-sm);
+    width:95vw;
+
+   
+    
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  

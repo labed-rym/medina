@@ -1,0 +1,228 @@
+html{
+  overflow: auto;
+}
+body{
+  height: fit-content;
+}
+
+
+.container {
+  margin: auto;
+  margin-top: 67px;
+  background-color:transparent;
+  height:fit-content;
+  width: 999px;
+}
+h1 {
+  margin:0;
+  color: #354618;
+  text-align: center;
+  margin-bottom: 25px;
+  
+}
+.dateGroup, .bet{
+  display:flex;
+  flex-direction: row; 
+  padding: 0;
+  
+ 
+}
+.nomPrenom{
+  margin-top:16.35px;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap:5px;
+}
+.bet{
+  margin-top: 2px;
+  align-items: flex-start;
+  gap:5px;
+  justify-content: flex-start;
+}
+.dateGroup{
+  align-items: flex-start;
+  justify-content: center;
+  justify-items: center;
+  column-gap:5px;
+  width:fit-content;
+  height:fit-content;
+}
+.dateGroup select{
+  margin: 0;
+  height:33px;
+  width:137px;
+}
+.bet div, .nomPrenom div{
+ margin: 0;
+  height: 71px;
+  width:210px;
+  padding: 0;
+}
+
+.bet div input, .nomPrenom div input{
+width:190px;
+}
+
+.flex {
+ 
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 999px;
+  height: 700px;
+  justify-content: space-around;
+  row-gap: 3px;
+  column-gap:5px ;
+  align-items: center;
+  
+  
+  }
+  .flex div{
+      width:404px;
+      height: fit-content;
+  }
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #2D3648;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="file"],
+  input[type="tel"],
+  input[type="number"]
+
+   {
+      height:31px;
+      margin:0;
+      width: 100%;
+      padding: 0px;
+      margin-bottom: 15px;
+      border: 1px solid #2D3648;
+      border-radius: 10px;
+      background-color: white;
+      padding-left:10px;
+      
+  }
+  select{
+      width: 101%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #2D3648;
+      border-radius: 10px;
+
+  }
+  
+  button {
+      width: 255px;
+      height: 40px;
+      padding: auto;
+      background-color: #354618;
+      color: #F4F6F2;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 30px;
+      margin-right: 0;
+      margin-left: 712px;
+      font-size: 24px;
+      font-family: 'Amiri',serif;
+      box-shadow: -4px 4px 10px #0000006a;
+  }
+  button:active{
+      box-shadow: none;
+  }
+  form{
+      margin-bottom: 40px;
+  }
+ 
+  
+  .customFileUpload {
+      border: 1px solid #2D3648;
+      border-radius: 10px;
+      display: inline-block;
+      justify-items: center;
+  color:rgb(138, 138, 138);
+      height: 30px;
+     
+      padding-left:7px;
+      padding-right: 7px;
+      cursor: pointer;
+      background-color: #Ffff;
+    }
+    
+    .customFileUpload:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .popup {
+      
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    /* Popup content */
+    .popupContent {
+      background-color: #F4F6F2;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+    }
+    
+   
+    
+    .popupContent p {
+      margin-bottom: 15px;
+      color: #000;
+      line-height: 1.5;
+      font-size: 19px;
+    }
+    
+    .popupOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popupActions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .popupActions {
+      margin-left: 104px;
+      font-size: 19px;
+    }
+    
+    .popupActions button {
+      background-color: #354618;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }

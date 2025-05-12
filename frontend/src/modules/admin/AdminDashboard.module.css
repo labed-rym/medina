@@ -1,0 +1,766 @@
+.adminDashboard {
+  display: flex;
+  background-color: #F4F6F2;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 5.5%;
+
+}
+
+.leftPanel {
+  width: 25%;
+  background-color: rgba(198, 208, 183, 0.64);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  margin-left: -20%;
+}
+
+.profileImageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8%;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.editOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 50%;
+}
+
+.imageContainer:hover .editOverlay {
+  opacity: 1;
+}
+
+.editIcon {
+  color: white;
+}
+
+.fileInput {
+  display: none;
+}
+
+.userName {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.userProfession {
+  margin: -2% 0 3% 0;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5B1D15;
+  font-weight: 600;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.contactInfo {
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 90%;
+  padding: 5px 0 5px 5px;
+ 
+}
+
+.contactIcon {
+  color: #354618;
+  margin-left: 26%;
+  margin-right: 0;
+}
+
+.contactText {
+  font-size: 17px;
+  color: #000;
+  font-weight: 600;
+  word-break: break-word;
+ 
+  
+}
+.phone {
+  font-size: 17px;
+  color: #000;
+  font-weight: 600;
+  word-break: break-word;
+}
+/* Right Panel - Admin Dashboard */
+.rightPanel {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F6F2;
+  margin-left: 5%;
+  margin-top: 6%;
+ 
+}
+
+/* Tabs */
+.tabsContainer {
+  display: flex;
+  border-bottom: 3px solid #354618;
+  margin-top: 5%;
+  width: 90%;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 950;
+  color: #354618;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  border-bottom: 3px solid transparent;
+  margin-right: 20px;
+}
+
+.activeTab {
+  color: #5B1D15;
+  border-bottom: 3px solid #5B1D15;
+  margin-top: -0.5%;
+}
+
+/* Notifications Panel */
+.notificationsPanel {
+  display: flex;
+  
+  flex-direction: column;
+  gap: 20px;
+  width: 128%;
+  margin-top: 6%;
+  margin-left: -24%;
+  
+}
+
+.notificationCard {
+  background-color: rgba(198, 208, 183, 0.6);
+  border-radius: 14px;
+  padding: 3%;
+  transition: all 0.3s;
+  margin-left: 18%;
+  width: 70%;
+}
+
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.notificationText {
+  font-size: 18px;
+  margin: 0;
+  color: #000;
+  font-weight: 600;
+  text-shadow: none;
+  width: 140%;
+}
+
+.viewMoreBtn {
+  background-color: #F5F5DC;
+  border: 2px ;
+  border-radius: 16px;
+  padding: 1% 1%;
+  color: #354618;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 17px;
+  text-align: center;
+}
+
+.viewMoreBtn:hover {
+  background-color: #354618;
+  color: white;
+}
+
+/* Status Text Styles */
+.statusText {
+  font-size: 19px;
+  font-weight: 600;
+  padding: 1% 4%;
+  border-radius: 16px;
+  margin: 0;
+}
+
+.approvedText {
+  color: #354618;
+}
+
+.rejectedText {
+  color: #8B3A3A;
+}
+
+.statusBtn {
+  cursor: default;
+}
+
+.approvedBtn {
+  background-color: #354618;
+  color: white;
+  border-color: #354618;
+}
+
+.rejectedBtn {
+  background-color: #8B3A3A;
+  color: white;
+  border-color: #8B3A3A;
+}
+
+/* Popup Styles */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.popup {
+  background-color: #F4F6F2;
+  border-radius: 17px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  animation: popupFadeIn 0.3s ease;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popupHeader {
+  display: flex;
+   margin-top: -3%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  
+}
+
+.popupHeaderr {
+  margin-left: 35%;
+  color: #354618;
+  font-size: 30px;
+  font-weight: 700;
+  
+}
+
+.closeBtnn {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.076);
+  background: #5B1D15;
+  width: 5.9%;
+  border-radius: 50px;
+  border: none;
+  color: #F4F6F2;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  margin-top: -1%;
+  margin-right: 2%;
+}
+
+.popupContent {
+  background-color: transparent;
+  padding: 4%;
+  
+}
+
+/* Certificate section */
+.certificateContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+}
+
+.viewCertBtn {
+  background-color: #354618;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 1px;
+  width: 18%;
+  margin-left: -102%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+  box-shadow:none;
+}
+
+.viewCertBtn:hover {
+  background-color: #293612;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Request Form and Actions */
+.requestForm {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 2px 10px 0 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: -7%;
+}
+
+.formRow {
+  display: flex;
+  gap:  4px;
+  margin-bottom: 3%;
+  background-color: transparent;
+}
+
+.formGroup {
+  flex: 1;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 18px;
+  color: #5B1D15;
+  margin-bottom: 0.4%;
+  font-weight: 700;
+}
+
+.formGroup p {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+  text-shadow: none;
+  padding:  0;
+  width: 100%;
+  
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6%;
+  margin-top: 3%;
+}
+
+.validateBtn, .rejectBtn {
+  padding: 1% 5%;
+  width: 20%;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 16px;
+  margin-top: -10%;
+}
+
+.validateBtn {
+  background-color: #354618;
+  color: white;
+  border: none;
+}
+
+.validateBtn:hover {
+  background-color: #293612;
+}
+
+.rejectBtn {
+  background-color: #fff;
+  color: #5B1D15;
+  border: 2px solid #5B1D15;
+}
+
+.rejectBtn:hover {
+  background-color: #5B1D15;
+  color: white;
+}
+
+.validateBtn:disabled, .rejectBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.statusMessage {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.approvedMessage {
+  color: #354618;
+  font-weight: 600;
+}
+
+.rejectedMessage {
+  color: #8B3A3A;
+  font-weight: 600;
+}
+
+/* Statistics Panel */
+.statisticsPanel {
+  width: 85%;
+  padding: 20px;
+  background-color: #F4F6F2; 
+  border-radius: 8px;
+}
+
+.chartContainer {
+  margin: 7% 0;
+  
+ 
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  margin-left: 10%;
+
+}
+
+.barContainer {
+  display: flex;
+  align-items: center;
+ 
+  
+}
+
+.barLabel {
+  width: 120px;
+  font-weight: 600;
+  color: #000;
+  font-size: 16px;
+  
+}
+
+.barWrapper {
+ 
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  position: relative;
+ 
+}
+
+.bar {
+  height: 100%;
+  background-color: #8B3A3A;
+  border-radius: 6px;
+  transition: width 0.5s ease-out;
+  
+}
+
+.barValue {
+  margin-left: 10px;
+  font-weight: 600;
+  color: #333;
+}
+.addAdminPanel {
+  width: 85%;
+  background-color: #F4F6F2;
+  border-radius: 10px;
+  padding: 10px ;
+  margin-top: 20px;
+  
+}
+
+.addAdminTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #354618;
+  margin-top:-2%;
+  text-align: center;
+}
+.addAdminForm {
+  background-color: rgba(198, 208, 183, 0.3);
+  border-radius: 12px;
+  padding: 15px 15px 15px -5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top:2%;
+  width: 90%;
+  margin-left: 10%;
+}
+
+.formMessage {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+ 
+  text-align: center;
+  
+}
+
+.successMessage {
+  width: 50%;
+  margin-left: 29%;
+  background-color: rgba(53, 70, 24, 0.2);
+  color: #354618;
+  
+}
+
+.errorMessage {
+  width: 50%;
+  margin-left: 29%;
+  background-color: rgba(139, 58, 58, 0.2);
+  color: #8B3A3A;
+}
+
+.formInput {
+  width: 70%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(53, 70, 24, 0.3);
+  font-size: 16px;
+  margin-top: 5px;
+  margin-left: 5%;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #354618;
+  box-shadow: 0 0 0 2px rgba(53, 70, 24, 0.2);
+}
+
+.formInput::placeholder {
+  color: #999;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 2px;
+  margin-top: 10px;
+  
+}
+
+.radioLabel {
+  
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  margin-left: -21%;
+}
+
+.radioInput {
+  width: 18px;
+  height: 18px;
+  accent-color: #354618;
+  cursor: pointer;
+}
+
+.genderLabel {
+  display: block;
+  font-size: 18px;
+  color: #5B1D15;
+  margin-bottom: 8px;
+  font-weight: 700;
+  
+}
+
+.submitButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.addAdminSubmitBtn {
+  background-color: #354618;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 2px 7px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 47%;
+}
+
+.addAdminSubmitBtn:hover {
+  background-color: #354618;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.addAdminSubmitBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Responsive design */
+@media (max-width: 992px) {
+  .adminDashboard {
+    flex-direction: column;
+  }
+  
+  .leftPanel {
+    width: 100%;
+    position: static;
+    padding-bottom: 20px;
+  }
+  
+  .rightPanel {
+    margin-left: 0;
+  }
+  
+  .formRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .popup {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  
+  .notificationText {
+    font-size: 16px;
+  }
+  
+  .contactText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabsContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tab {
+    width: 100%;
+    text-align: center;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+  
+  .activeTab {
+    border-bottom: none;
+    border-left: 3px solid #8B3A3A;
+    background-color: rgba(198, 208, 183, 0.3);
+  }
+  
+  .contactInfo {
+    width: 95%;
+  }
+}
+/* Add Admin Panel styles */
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .addAdminPanel {
+    width: 95%;
+  }
+  
+  .addAdminSubmitBtn {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .radioGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .addAdminSubmitBtn {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .addAdminForm {
+    padding: 15px;
+  }
+  
+  .addAdminTitle {
+    font-size: 24px;
+  }
+  
+  .addAdminSubmitBtn {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}

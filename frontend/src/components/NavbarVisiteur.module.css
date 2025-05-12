@@ -1,0 +1,120 @@
+.nav{
+    top:0;
+      position: fixed;
+        margin-top:0;
+        left:0;
+        width:100%;
+        height:55px;
+        background-color: #C6D0B7;
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+        justify-items:center;
+         gap:450px;
+        overflow: hidden;
+        z-index: 1111;
+        }
+        .icons{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: stretch;
+          margin-top: 0px;
+          height: 55px;
+          margin-right: 15px;
+        gap:6px;
+          font-size: 18px;
+          
+        }
+        
+        .icon{
+          color:black;
+        width:40px;
+          height:55px;
+          padding-top: 16px;
+          vertical-align: center;
+          justify-content: center;
+          text-align: center;
+          justify-items: center;
+          cursor: pointer;
+        }
+        span {
+          color:black;
+        }
+        
+        img{
+          width:50px;
+          height:50px;
+          margin-top: 2.5px;
+          margin-bottom: 2.5px;
+          margin-left:20px;
+         
+        }
+        .settings{
+          background-color: #0000006a;
+        }
+        .parametres{
+          margin-left: 1220px;
+         
+        }
+        .profile{
+        margin-left: 1149px;
+        
+        } 
+        .acceuil{
+          margin-left: 1166px;
+        }
+        .notification{
+          margin-left:1040px;
+          
+        }
+        .deconnexion{
+          margin-left: 1100px;
+         
+        }
+      
+        
+        .icon:hover{
+          background-color: #0000006a;
+        }
+        
+       
+        
+        
+        
+        i{
+          width:20px;
+          height: 20px;
+          padding: 0;
+          margin: 0;
+        }
+        .visiteur{
+            align-items: center;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+            width:150px;
+            height: 100%;
+            background-color:transparent;
+        }
+        .pdp{
+            width:50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #C6D0B7;
+            margin-left: 6px;
+            overflow: hidden;
+
+        }
+        .pdp img{
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            margin:0;
+
+        }
+        .userName{
+            text-align: center;
+        }

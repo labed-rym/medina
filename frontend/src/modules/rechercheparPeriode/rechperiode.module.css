@@ -1,0 +1,318 @@
+.container {
+    background-color: #f4f6f2;
+    min-height: calc(100vh - 55px);
+    padding: 6% 1%;
+    display: block;
+    width: 100%;
+    margin-top: 3%;
+    box-sizing: border-box;
+  }
+  
+  .contentWrapper {
+    
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .navigationSection {
+
+    position: fixed;
+    margin-top: -241px;
+    left: 0;
+    width: 100%;
+    background-color: #f4f6f2;
+    z-index: 100;
+    padding: 15px 0;
+    
+   
+  }
+  
+  .navigationContent {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .backButtonContainer {
+    position: absolute;
+    right: 95%;
+    margin-top: 1.5%;
+  }
+  
+  .backButton {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #33331a;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .searchContainer {
+    position: absolute;
+    left: 40%;
+    margin-top: 1%;
+    transform: translateX(-50%);
+    width: 35%;
+    max-width: 500px;
+  }
+  
+  .searchInput {
+    font-weight: 600;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 9px;
+    border: 1.6px solid #354618;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #f4f6f2;
+    font-family: "Amiri", serif;
+    font-size: 1.125rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .searchIcon {
+    position: absolute;
+    margin-left: 110%;
+    margin-top: -5.5%;
+    transform: translateY(-50%);
+    color: #354618;
+    pointer-events: none;
+  }
+  
+  .filtersSection {
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    background-color: #f4f6f2;
+    z-index: 99;
+    padding: 10px 0;
+  
+  }
+  
+  .periodButtonsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4%;
+   
+  }
+  
+  .periodButtonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 11px; 
+    overflow-x: auto;
+    scrollbar-width: none;
+    
+    max-width: calc(100% - 100px);
+    scroll-behavior: smooth;
+    
+  }
+  
+  .periodButtonsContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  .periodButtonn {
+    box-shadow: none;
+    width: 24%;
+    padding: 4px 0 0 0;
+    border-radius: 20px;
+    background-color: #f4f6f2;
+    color: #354618;
+    border: 1.5px solid #354618;
+    cursor: pointer;
+    font-family: "Amiri", serif;
+    font-size: 20px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin: 0; 
+  }
+  
+  .periodButtonn:hover {
+    background-color: #354618;
+    color: #f4f6f2;
+  }
+  
+  .activePeriod {
+    background-color: #354618 !important;
+    color: #f4f6f2 !important;
+    font-weight: 800;
+  }
+  
+  .periodNavButton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    margin: 0 5px;
+  }
+  
+  .periodNavButton:hover {
+    background-color: rgba(51, 51, 26, 0.1);
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7%;
+    width: 90%;
+    margin-top: 16%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-left: 4%;
+  }
+  
+  .projectCard {
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    aspect-ratio: 1/1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projectCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  
+  .projectTitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-shadow: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    font-family: "Amiri", serif;
+    font-size: 1.1rem;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  
+  .projectCard:hover .projectTitle {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 1200px) {
+    .projectsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contentWrapper {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .projectsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .searchContainer {
+      width: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding-top: 150px;
+    }
+  
+    .navigationSection {
+      height: auto;
+      padding: 10px 0;
+    }
+  
+    .navigationContent {
+      height: auto;
+      flex-direction: column;
+    }
+  
+    .backButtonContainer {
+      position: relative;
+      left: auto;
+      margin-bottom: 15px;
+    }
+  
+    .searchContainer {
+      position: relative;
+      left: auto;
+      transform: none;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .periodButtonsWrapper {
+      width: 100%;
+    }
+    
+    .periodButtonsContainer {
+      max-width: calc(100% - 90px);
+    }
+  
+    .projectsGrid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 190px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projectsGrid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
+    
+    .contentWrapper {
+      width: 98%;
+    }
+    
+    .periodButtonn {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+    
+    .periodNavButton {
+      width: 36px;
+      height: 36px;
+    }
+  }

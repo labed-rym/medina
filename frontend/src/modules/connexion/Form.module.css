@@ -1,0 +1,106 @@
+.container {
+    background-color: #E8EDDE;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 60%;
+    margin-top: 130px;
+    margin-left: 400px;
+    margin-right: 400px;
+    position: relative; 
+    transform: translateY(-20px); 
+}  
+
+h1 {
+    font-family: 'Amiri', serif;
+    color: #354618;
+    font-size: 32px;
+    margin-bottom:30px;
+    font-weight: bold;
+    margin-left: 90px;
+}
+
+input {
+    font-family: 'Amiri', serif;
+    width: 100%;
+    padding: 10px;
+    border: 1.4px solid #4a5730;
+    border-radius: 10px;
+    background-color: #E8EDDE;
+    font-size: 18px;
+    margin-left: 90px;
+}
+
+.inputs div{
+    width: 404px;
+    height: 146px;
+    border-radius: 10px;
+}
+
+label {
+    font-weight: normal;
+    color: #333;
+    font-size: 22px;
+    font-family: 'Amiri', serif;
+    margin-left: 90px;
+}
+
+.connexion {
+    width: 255px;
+    height: 40px;
+    padding: auto;
+    background-color: #354618;
+    color: #F4F6F2;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 160px;
+    font-size: 24px;
+    font-family: 'Amiri',serif;
+    box-shadow: -4px 4px 10px #0000006a;
+}
+
+button:active{
+    box-shadow: none;
+}
+
+.forget {
+    margin-bottom: 6px;
+    text-decoration: underline;
+    font-size: 18px;
+    color: #462A28;
+    font-family: 'Amiri', serif;
+    margin-left: 430px;
+    margin-top: -10px;
+}
+
+.inputs{
+    width: 700px;
+    height: 230px;
+}
+
+.motdepasse{
+    margin-top: -30px;
+}
+
+
+.passwordContainer {
+    position: relative;
+    display: inline-block;
+    width: 120%;
+}
+
+.togglePassword {
+    position: absolute;
+    right: -91px;
+    top: 24px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4a5730;
+}
+
+.togglePassword:hover {
+    color: #354618;
+}

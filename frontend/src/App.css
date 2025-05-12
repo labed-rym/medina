@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
+
+@media (max-width:1000px) {
+  #navbar{
+    gap:650px;
+  }
+}
+:root{
+  height: fit-content;
+  width: 100vw;
+  overflow-x: hidden;
+}
+#mainc{
+  display: block;
+  height: fit-content;
+  width: 100vw;
+  overflow-x: hidden;
+  align-items: center;
+}
+html{
+  margin:0;
+  padding: 0;
+  right: 0;
+  height:fit-content;
+  width: 100vw;
+  overflow:hidden;
+  overflow-x: hidden;
+
+}
+.body{
+  font-family: 'Amiri', serif;
+  background-color: #F4F6F2;
+ margin: 0;
+padding: 0;
+display: block;
+ align-content: baseline;
+ justify-items: center;
+ justify-content: center;
+  height:fit-content;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+
+
+
+#file-upload{
+  display: none;
+}
+#file-upload2{
+  display: none;
+}
+
+#file-name{
+  display: inline-block;
+  margin-left: 10px;
+} 
+#file-name2{
+  display: inline-block;
+  margin-left: 10px;
+} 
+.popupOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 700px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #E8EDDE;
+  border-radius: 16px;
+  padding: 20px;
+  z-index: 1000;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+
+ /* Popup Header */
+ .popup h2 {
+  margin:0;
+  margin-top: 20px;
+  position: absolute;
+  width: 455px;
+  height: 92px;
+  left: 60px;
+  top: -10px;
+  font-family: 'Amiri'; 
+  font-size: 43px;
+  text-align: center;
+  color: #354618;
+}
+
+/* Contact Details */
+.popup p.contactInfo {
+  margin: 0;
+  position: absolute;
+  width: 895px;
+  height: 165px;
+  left: -80px;
+  top:100px;
+  font-family: 'Amiri';
+  font-size: 20px;
+  text-align: center;
+  color: rgba(0, 0, 0);
+}
+
+/* Assistance Message */
+.popup p.assistance {
+  margin: 0;
+  position: absolute;
+  width: 853px;
+  height: 56px;
+  left: -65px;
+  top: 200px;
+  font-family: 'Amiri';
+  
+  font-size: 20px;
+  text-align: center;
+  color: rgba(53, 70, 24);
+}
+
+/* Close Button */
+.closeBtn {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #333;
+}
+react.fragment {
+  margin: 0;
+  padding-top: 0;
+  padding-left: 0;
+  display: block;
+ align-content: baseline;
+  height: fit-content;
+}
+
+.text{
+
+  position: absolute;
+  width:fit-content;
+  height: fit-content;  
+  margin-top: 45px;
+  display: none;
+  cursor: pointer;
+ 
+}
+
+
+
+.text p{
+  margin:0;
+  width: fit-content;
+  color: #F4F6F2;
+  font-size: 13px;
+  line-height: 1;
+  padding: 2px;
+  background-color:#354618;
+ 
+}
+
+.active{
+  display: block;
+}
+
+.image-container {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  border-radius: 50%; /* Perfectly round images */
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Position styles */
+.left {
+  width: 300px;
+  height: 300px;
+  z-index: 4;
+  left: 290px;
+  top: 80px;
+  transform: scale(1);
+}
+
+.middle {
+  width: 330px;
+  height: 330px;
+  z-index: 5;
+  left: 490px;
+  top: 100px;
+  transform: scale(1.1);
+}
+
+.right {
+  width: 300px;
+  height: 300px;
+  z-index: 4;
+  left: 690px;
+  top: 80px;
+  transform: scale(1);
+}
+
+/* Link styles */
+
+
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+/* Cover styles for all image containers */
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* Special cover styling for left and right positions */
+.left .cover, .right .cover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for left and right positions */
+.left:hover .cover, .right:hover .cover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Special cover for middle position - always visible with higher opacity */
+.middle .cover {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

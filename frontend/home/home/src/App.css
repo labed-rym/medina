@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css?family=Amiri');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
+
+  
+
+
+
+body {
+  font-family: 'Amiri', serif;
+  background-color: #F4F6F2;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 0;
+
+  display: block;
+ align-content: baseline;
+ justify-items: center;
+ justify-content: center;
+  height: fit-content;
+}
+
+.text{
+  position: absolute;
+  width:fit-content;
+  height: fit-content;  
+  margin-top: 45px;
+  display: none;
+  cursor: pointer;
+ 
+}
+
+
+.text p{
+  color: #F4F6F2;
+  font-size: 13px;
+  line-height: 1;
+  padding: 2px;
+  background-color:#354618;
+ 
+}
+.active{
+  display: block;
+}
+.left{
+  padding: 0;
+width:300px;
+height:300px;
+position:absolute;
+z-index:4;
+border-radius: 100%;
+left:250px;
+top:80px;
+overflow: hidden;
+}
+.filters{
+  height: fit-content;
+}
+.middle{
+  padding: 0;
+width:330px;
+height:330px;
+position:absolute;
+z-index:5;
+border-radius: 100%;
+left:450px;
+top:180px;
+overflow: hidden;
+}
+.right{
+  padding: 0;
+width: 300px;
+height:300px;
+position:absolute;
+z-index:4;
+border-radius: 100%;
+left:680px;
+top:280px;
+overflow: hidden;
+}
+.img{
+  margin:0;
+ width: 100%;
+ height: 100%;
+}
+.cover{
+  background-color: #C6D0B7;
+  margin:0;
+ width: 100%;
+ height: 100%;
+opacity: 80%;
+z-index: 5;
+}

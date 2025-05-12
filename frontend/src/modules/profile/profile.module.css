@@ -1,0 +1,429 @@
+.profileContainer {
+  display: flex;
+  background-color: #F4F6F2;
+  width: 100%;
+  margin-top: 3%;
+  margin-left: 0;
+  height: 100%;
+  
+}
+
+.leftPanel {
+  
+  width: 20%;
+  background-color: rgba(198, 208, 183, 0.64);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  height: 100%;
+  margin-left: 0;
+  margin-top: 0; 
+}
+
+.rightPanel {
+  background-color: #F4F6F2;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 130px  130px 11px 130px  ;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+}
+
+.profileImageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16%; 
+  border-bottom: 2px solid #fff;
+  width: 100%;
+}
+
+.imageContainer {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 0; 
+  margin-left: 0;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.editOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 50%;
+}
+
+.imageContainer:hover .editOverlay {
+  opacity: 1;
+}
+
+.editIcon {
+  color: white;
+}
+
+.fileInput {
+  display: none;
+}
+
+.userName {
+ font-family: 'Amiri', serif;
+  margin: 4% 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.userProfession {
+  font-family: 'Amiri', serif;
+  margin: -1px 22px 10px 0;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  text-shadow: 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sectionContainer {
+  width: 90%;
+  padding: 20px 0;
+  border-bottom: 2px solid #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* New hover effect with centered edit button */
+.sectionOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+
+.sectionEditIcon {
+  color: white;
+  width: 30px;
+  height: 30px;
+}
+
+.sectionHeader {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionTitle {
+  font-family: 'Amiri', serif;
+  color: #8B3A3A;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 800;
+  text-shadow: 0 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.editButtonContainer {
+  display: none;
+}
+
+.editButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editButton svg {
+  width: 14px;
+  height: 14px;
+}
+
+.sectionContent {
+  
+
+  width: 100%;
+
+  transition: all 0.3s ease;
+}
+
+.infoItem {
+  margin-top: -9%;
+  margin-left: 9%;
+  
+}
+
+.school{
+  font-family: 'Amiri', serif;
+  padding: 14px 10px;
+  font-weight:500;
+  text-shadow: none;
+  margin: 0;
+  color: #000;
+  font-size: 16px;
+  margin: 0;
+  display: flex;
+  line-height: 1.5;
+  
+}
+.location{
+  font-family: 'Amiri', serif;
+  padding: 0 10px;
+  font-weight:500;
+  text-shadow: none;
+  margin: 0;
+  color: #000;
+  font-size: 16px;
+  margin: 0;
+  display: flex;
+  line-height: 1.5;
+  
+}
+
+.company {
+  font-family: 'Amiri', serif;
+  font-weight:500;
+  text-shadow: none;
+  margin: 0;
+  color: #000;
+  font-size: 16px;
+  
+}
+
+.degree{
+  font-weight: 700;
+  font-family: 'Amiri', serif;
+  margin-top: 12%;
+  font-size: 16px;
+}
+.noData{
+  font-family: 'Amiri', serif;
+  width: 90%;
+  padding: 14px 10px;
+  font-weight:500;
+  text-shadow: none;
+  margin: 0;
+  color: #000;
+  font-size: 16px;
+  margin: 0;
+  display: flex;
+  line-height: 1.5;
+  margin-left: 5%;
+ 
+}
+.searchContainer {
+  position: relative;
+  margin-top: -7%;
+  padding-left: 15%;
+  
+}
+
+.searchInput {
+  width: 49%;
+  padding-left: 4%;
+  padding-top: 1.6%;
+  padding-bottom: 1.6%;
+  border-radius: 14px;
+  
+  border: 1.3px solid #354618;
+  outline: none;
+  font-size: 17px;
+  font-weight: 550;
+  background: transparent;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 29.5%;
+  top: 64%;
+  transform: translateY(-50%);
+  color: #354618;
+}
+
+
+.projectsGrid {
+display: grid;
+ grid-template-columns: repeat(3, 1fr);
+gap: 3%;
+width: 100%;
+margin-top: 14%;
+height: auto;
+margin-left: 3%;
+transition: transform 0.3s, box-shadow 0.3s;
+height: 100%;
+
+
+  
+}
+
+
+.projectCard {
+  background-color: #000;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.projectCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+
+.projectDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 9%;
+  padding-right: 0;
+  padding-top: 9%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 18px;
+  opacity: 0;
+ 
+}
+
+.projectCard:hover .projectDetails {
+  opacity: 1;
+ 
+}
+
+
+
+.addProjectCard {
+  border-radius: 12px;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #C6D0B7;
+  height: 100%;
+  
+  transition: background-color 0.3s;
+}
+
+
+.addProjectCard:hover .addProjectText {
+  
+  opacity: 1;
+}
+
+.noProjects{
+  font-family: 'Amiri', serif;
+  width: 125%;
+  padding: -13px 10px -13px 40px;
+  font-weight:600;
+  text-shadow: none;
+  margin: 0;
+  color: #000;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  line-height: 1.5;
+  margin-left: 100%;
+  
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+  
+  .leftPanel {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  
+  .sectionContainer, .profileImageSection {
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .rightPanel {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  
+  .searchContainer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}

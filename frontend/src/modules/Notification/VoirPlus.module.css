@@ -1,0 +1,185 @@
+
+.detailsContainer {
+  width: 100%;
+  margin: 55px auto;
+  background-color: #F6F6F2;
+  height: 100%;
+ 
+  overflow: hidden;
+  font-family: 'Amiri', serif;
+  position: relative;
+}
+
+.editDetails {
+  padding: 0;
+  background-color: #fff;
+  width: 70%;
+  height: 100%;
+  margin-left: 220px;
+}
+.projectDetails {
+    padding: 0;
+  }
+.detailsHeader {
+    top: 10px;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  
+}
+
+.statusMessage {
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+  margin-left: 60px;
+}
+
+.statusMessage.accepted {
+  background-color: #e7f0e7;
+  color: #354618;
+}
+
+.statusMessage.refused {
+  background-color: #f0e7e7;
+  color: #354618;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.backButton {
+font-family: 'Amiri', serif;  
+  position: absolute;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.99);
+  left: 30px;
+  padding: 1px 36px;
+  background-color: #354618;
+  color: #F6F6F2;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 22px;
+  width: 10%;
+}
+
+.backButton:hover {
+  opacity: 0.9;
+}
+
+.detailsContent {
+  padding: 30px;
+  
+}
+
+.originalModification, .newModification {
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  background-color: #fff;
+  
+}
+
+.newModification {
+  background-color: #c6d0b7;
+  border-radius: 8px;
+}
+
+.newText {
+  background-color: #F6F6F2;
+}
+
+.chatterButton {
+  font-family: 'Amiri', serif;  
+  padding: 1px 36px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 12%;
+  font-size: 22px;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-left: 500px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #354618;
+  color: #F6F6F2;
+}
+.refuserButton {
+    font-family: 'Amiri', serif;  
+  padding: 1px 36px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-left: 60px;
+    background-color: #354618;
+  color: #F6F6F2;
+  width: 14%;
+  
+  } 
+  .acceptButton {
+    font-family: 'Amiri', serif;  
+    padding: 1px 36px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: 60px;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #354618;
+    color: #F6F6F2;
+    width: 13%;
+  }
+
+.actionButtons button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .detailsContainer {
+    margin: 20px;
+  }
+  
+  .detailsHeader h3 {
+    font-size: 20px;
+    padding-right: 80px;
+  }
+  
+  .detailsContent {
+    padding: 20px;
+  }
+  
+  .originalText, .newText {
+    font-size: 16px;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .actionButtons button {
+    width: 100%;
+  }
+  
+  .statusMessage {
+    margin-left: 0;
+    margin-top: 20px;
+    display: block;
+  }
+}

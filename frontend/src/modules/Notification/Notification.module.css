@@ -1,0 +1,170 @@
+.notificationContainer {
+  font-family: 'Amiri', serif;
+  height: 100%;
+  width: 100%;
+ 
+}
+
+.trash_button {
+  margin-right: 5px;
+  margin-left: calc(95% - 40px);
+  margin-top: 70px;
+  font-size: 30px;
+  cursor: pointer;
+  width: 9%;
+  
+}
+
+.notifications {
+  max-width: 100%;
+  margin: 80px auto 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  height: 100%;
+  
+}
+
+.notification {
+  width: 100%;
+  margin-left: -2%;
+  background-color: #e2e7d4;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.notificationLeft {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.userIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #b3c4e3;
+  margin-right: 15px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23718096"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-3.313 0-6 1.343-6 3v1h12v-1c0-1.657-2.687-3-6-3z"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  flex-shrink: 0;
+}
+
+.notificationContent {
+  flex: 4;
+}
+
+.notificationHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  margin-right: 5px;
+}
+
+.separator {
+  margin: 0 5px;
+  color: #2c2c2c;
+}
+
+.userProfession {
+  color: #333333;
+  font-size: 20px;
+}
+
+.notificationMessage {
+  margin: 0;
+  font-size: 14px;
+  color: #131212;
+  width: 100%;
+}
+
+.notificationActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 15px;
+  width: 50%;
+}
+
+.notificationStatus {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #354618;
+  background-color: #f0f2eb;
+}
+
+.notificationActions button {
+  padding: 6px 16px;
+ 
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.voirPlus {
+  background-color: #f5f5e7;
+  color: #354618;
+  width: 47%;
+}
+
+.accept {
+  background-color: #354618;
+  color: white;
+  width: 47%;
+}
+
+.refuse {
+  background-color: #354618;
+  color: white;
+  width: 47%;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Animation for accepting/refusing */
+.notification.accepted {
+  transform: translateX(10px);
+  opacity: 0.99;
+  background-color: #e7f0e7;
+}
+
+.notification.refused {
+  transform: translateX(10px);
+  opacity: 0.99;
+  background-color: #cd5858;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .notification {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .notificationActions, .notificationStatus {
+    margin-top: 15px;
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
