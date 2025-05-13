@@ -6,6 +6,10 @@
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "types": ["react", "react-dom"]
+    "types": ["react", "react-dom"],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noEmit": false,
+    "outDir": "dist"
   }
 }
