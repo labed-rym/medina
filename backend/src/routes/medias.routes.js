@@ -20,7 +20,7 @@ router.get("/thumb/:id",verifyToken,checkRole(["professionnel"]), mediasControll
 router.get("/:id/metadata",verifyToken,checkRole(["professionnel"]), mediasController.getMediaMetadata);
 
 // Liste par section
-router.get("/section/:sectionId",verifyToken,checkRole(["professionnel"]), mediasController.getMediasBySection);
+router.get("/section/:sectionId", mediasController.getMediasBySection);
 
 // Médias récents
 router.get("/recent",verifyToken,checkRole(["professionnel"]), mediasController.getRecentMedias);
@@ -37,5 +37,5 @@ router.delete("/:id", verifyToken, checkRole(["professionnel"]),mediasController
 // 🔐 Mise à jour: utilisateur ou admin
 router.put("/:id", verifyToken,checkRole(["professionnel"]),mediasController.updateMediaMetadata);
 
-router.get("/oeuvre/:oeuvreId", verifyToken, checkRole(["professionnel"]), mediasController.getMediasByOeuvre);
+router.get("/oeuvre/:oeuvreId", mediasController.getMediasByOeuvre);
 module.exports=router;
