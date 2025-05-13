@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 22022006
+      MYSQL_DATABASE: medina
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./backend/medina.sql:/docker-entrypoint-initdb.d/medina.linux.sql
+      
+    ports:
+      - "3306:3306"
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules  # avoid node_modules conflict
+    env_file:
+      - ./backend/.env
+    environment:
+      DB_HOST: db
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules  # ignore host's node_modules
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
